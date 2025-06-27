@@ -11,6 +11,13 @@ Kafka Producer → Kafka Topic → Spark Streaming → MySQL
 - Apache Spark (Structured Streaming)
 - MySQL
 - Linux (Ubuntu)
+
+## 🗂️ Files
+- `clickstream_producer.py` — sends events to Kafka
+- `spark_streaming_job.py` — reads from Kafka, aggregates, writes to MySQL
+- `start_spark_job.sh` — optional launch script
+- `Clickstream_Project_Report.pdf` — project documentation
+
 ## Steps
 #### Step 1: Start Required Services
 Start Zookeeper, Kafka, and MySQL in separate terminal tabs.
