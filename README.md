@@ -20,7 +20,9 @@ Kafka Producer → Kafka Topic → Spark Streaming → MySQL
 
 
 ## ⚡ Spark Streaming Output
+![image](https://github.com/user-attachments/assets/7eeff6f6-86af-4ce1-9d0c-b6017ff9beaa)
 
 
 ## 💾 MySQL Table Output
+![image](https://github.com/user-attachments/assets/b59bd1ca-bc56-49b6-a39e-fb743e740404)
 
