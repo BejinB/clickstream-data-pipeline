@@ -1,3 +1,3 @@
 # clickstream-data-pipeline
 
-### 🚀 Real-Time Clickstream Processing using Apache Kafka, Apache Spark, and MySQL
+## 🚀 Real-Time Clickstream Data Pipeline Using Apache Kafka, Apache Spark, and MySQL
