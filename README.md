@@ -18,7 +18,7 @@ Kafka Producer → Kafka Topic → Spark Streaming → MySQL
 - `start_spark_job.sh` — optional launch script
 - `Clickstream_Project_Report.pdf` — project documentation
 
-## Steps
+## 🛠️ Steps
 #### Step 1: Start Required Services
 Start Zookeeper, Kafka, and MySQL in separate terminal tabs.
 ```
