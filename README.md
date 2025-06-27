@@ -39,9 +39,7 @@ python3 clickstream_producer.py
 #### Step 4: Run the Spark Streaming Job
 This job reads from Kafka, performs windowed aggregations, and writes to MySQL.
 ```
-spark-submit \
-  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.2 \
-  spark_streaming_job.py
+./start_spark_job.sh
 ```
 Keep this terminal running — it continuously processes incoming Kafka data.
 #### Step 5: Check MySQL for Aggregated Output
