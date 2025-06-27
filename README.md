@@ -6,10 +6,11 @@
 Kafka Producer → Kafka Topic → Spark Streaming → MySQL
 
 ## 🧪 Technologies
-- Python (Kafka producer, Spark job)
-- Apache Kafka
+- Python (used for Kafka producer and controlling Spark jobs)
+- PySpark (for real-time stream processing with Apache Spark)
+- Apache Kafka (real-time message streaming)
 - Apache Spark (Structured Streaming)
-- MySQL
+- MySQL (storage of aggregated results)
 - Linux (Ubuntu)
 
 ## 🗂️ Files
