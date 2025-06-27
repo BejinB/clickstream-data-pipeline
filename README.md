@@ -11,6 +11,48 @@ Kafka Producer → Kafka Topic → Spark Streaming → MySQL
 - Apache Spark (Structured Streaming)
 - MySQL
 - Linux (Ubuntu)
+## Steps
+#### Step 1: Start Required Services
+Start Zookeeper, Kafka, and MySQL in separate terminal tabs.
+```
+# Start Zookeeper
+cd ~/kafka
+bin/zookeeper-server-start.sh config/zookeeper.properties
+
+# Start Kafka
+cd ~/kafka
+bin/kafka-server-start.sh config/server.properties
+
+# Start MySQL
+sudo service mysql start
+```
+#### Step 2: Activate Python Virtual Environment
+```
+cd ~/clickstream_project
+source venv/bin/activate
+```
+#### Step 3: Start the Kafka Producer
+This will continuously send simulated user click events.
+```
+python3 clickstream_producer.py
+```
+#### Step 4: Run the Spark Streaming Job
+This job reads from Kafka, performs windowed aggregations, and writes to MySQL.
+```
+spark-submit \
+  --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.2 \
+  spark_streaming_job.py
+```
+Keep this terminal running — it continuously processes incoming Kafka data.
+#### Step 5: Check MySQL for Aggregated Output
+Open MySQL and view the real-time results:
+```
+mysql -u clickstream -p
+
+USE clickstream;
+
+SELECT * FROM click_aggregates ORDER BY window_start DESC;
+```
 
 
 
